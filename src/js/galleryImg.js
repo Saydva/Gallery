@@ -1,10 +1,12 @@
+import OpenModal from './openModal.js';
+
 const galleryImages = [];
 
 function generateGalleryArray(width, height, id) {
   return `https://picsum.photos/${width}/${height}?random=${id}`;
 }
 
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 6; i++) {
   const imageUrl = generateGalleryArray(300, 200, i);
   galleryImages.push({
     src: imageUrl,
@@ -23,6 +25,7 @@ function displayGallery() {
     const img = document.createElement('img');
     img.src = image.src;
     img.alt = image.alt;
+    img.onclick = () => OpenModal(image.src);
     img.classList.add('gallery-img');
 
     const caption = document.createElement('div');
