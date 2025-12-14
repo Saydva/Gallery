@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
 
@@ -11,10 +11,23 @@
   </head>
   <body>
     <h1 class="bg-slate-700 text-cyan-200 text-center">Hello</h1>
-    <div id="gallery" class="gallery"></div>
-    <div id="imageModal" class="modal">
-      <img class="modal-content" id="modalImage" />
-      <span class="close">&times;</span>
+    <div id="gallery" class="gallery flex flex-wrap gap-4 justify-center"></div>
+    <div
+      id="imageModal"
+      class="hidden fixed top-0 left-0 w-full h-full justify-center items-center z-50 bg-black/80"
+    >
+      <div class="relative">
+        <img
+          class="w-[90vw] h-[90vh] z-[1001] rounded-md object-contain"
+          id="modalImage"
+        /><button
+          id="closeBtn"
+          class="absolute top-2.5 right-2.5 text-red-700 text-4xl font-bold transition duration-300 cursor-pointer z-[1002] bg-none border-none"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+      </div>
     </div>
     <script type="module" src="../src/js/galleryImg.js"></script>
   </body>
