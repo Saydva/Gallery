@@ -1,4 +1,6 @@
-import { getModalImg } from './modalImg.js';
+const getModalImg = (width, height, id) => {
+  return `https://picsum.photos/${width}/${height}?random=${id}`;
+};
 
 function OpenModal(imgSrc) {
   const modal = document.getElementById('imageModal');
@@ -12,7 +14,7 @@ function OpenModal(imgSrc) {
   };
 
   modal.onclick = function (event) {
-    if (event.target !== modalImg && event.target !== closeBtn) {
+    if (event.target !== modalImg) {
       modal.style.display = 'none';
     }
   };
