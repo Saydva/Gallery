@@ -1,5 +1,5 @@
 const getModalImg = (width, height, id) => {
-  return `https://picsum.photos/${width}/${height}?random=${id}`;
+  return `https://loremflickr.com/${width}/${height}?random=${id}`;
 };
 
 function OpenModal(imgSrc) {
