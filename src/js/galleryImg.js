@@ -3,7 +3,7 @@ import OpenModal from './openModal.js';
 const galleryImages = [];
 
 function generateGalleryArray(width, height, id) {
-  return `https://picsum.photos/${width}/${height}?random=${id}`;
+  return `https://loremflickr.com/${width}/${height}?random=${id}`;
 }
 
 for (let i = 1; i <= 6; i++) {

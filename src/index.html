@@ -10,23 +10,36 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="bg-slate-700 text-cyan-200 text-center">Hello</h1>
+    <h1 class="bg-slate-700 text-cyan-200 text-center">My gallery</h1>
     <div id="gallery" class="gallery flex flex-wrap gap-4 justify-center"></div>
     <div
       id="imageModal"
       class="hidden fixed top-0 left-0 w-full h-full justify-center items-center z-50 bg-black/80"
     >
       <div class="flex w-[90vw] h-[90vh] justify-center">
-        <img class="z-10 rounded-md object-contain" id="modalImage" />
-        <div class="flex justify-start items-start">
-          <button
-            id="closeBtn"
-            aria-label="Close modal"
-            class="text-red-700 text-5xl pr-2 hover:text-red-500"
-          >
-            &times;
-          </button>
-        </div>
+        <button
+          id="prevBtn"
+          aria-label="Previous image"
+          class="text-white text-5xl pr-2 hover:text-gray-300"
+        >
+          &#10094;
+        </button>
+        <img class="z-10 rounded-md object-contain relative" id="modalImage" />
+        <button
+          id="closeBtn"
+          aria-label="Close modal"
+          class="text-red-700 text-5xl pr-2 hover:text-red-500 absolute top-5 right-10"
+        >
+          &times;
+        </button>
+        <button
+          id="nextBtn"
+          aria-label="Next image"
+          class="text-white text-5xl pl-2 hover:text-gray-300"
+        >
+          &#10095;
+        </button>
+        <div class="flex justify-start items-start"></div>
       </div>
     </div>
     <script type="module" src="../src/js/galleryImg.js"></script>
