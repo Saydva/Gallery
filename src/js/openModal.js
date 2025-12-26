@@ -1,13 +1,14 @@
-const getModalImg = (width, height, id) => {
-  return `https://loremflickr.com/${width}/${height}?random=${id}`;
-};
+export const baseUrl = 'https://loremflickr.com/';
+
+export const generateImageUrl = (width, height, id) =>
+  `${baseUrl}${width}/${height}?random=${id}`;
 
 function OpenModal(imgSrc) {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
   const closeBtn = document.getElementById('closeBtn');
   modal.style.display = 'flex';
-  modalImg.src = getModalImg(800, 600, imgSrc.split('=')[1]);
+  modalImg.src = generateImageUrl(800, 600, imgSrc.split('random=')[1]);
   // console.log(imgSrc);
   closeBtn.onclick = function () {
     modal.style.display = 'none';
