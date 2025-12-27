@@ -1,6 +1,6 @@
 import OpenModal from './openModal.js';
-
 import { generateImageUrl } from './constants.js';
+import { MAX_IMAGE_ID } from './constants.js';
 
 const galleryImages = [];
 
@@ -8,7 +8,7 @@ function generateGalleryArray(width, height, id) {
   return generateImageUrl(width, height, id);
 }
 
-for (let i = 1; i <= 12; i++) {
+for (let i = 1; i <= MAX_IMAGE_ID; i++) {
   const imageUrl = generateGalleryArray(300, 200, i);
   galleryImages.push({
     src: imageUrl,

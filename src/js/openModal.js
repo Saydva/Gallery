@@ -1,4 +1,6 @@
 import { generateImageUrl } from './constants.js';
+import { MAX_IMAGE_ID } from './constants.js';
+import { createProgressDots, updateProgressDots } from './progerssBar.js';
 
 function OpenModal(imgSrc) {
   const modal = document.getElementById('imageModal');
@@ -22,24 +24,24 @@ function OpenModal(imgSrc) {
       modal.style.display = 'none';
     }
   };
-  console.log(imgSrc);
 
   let id = parseInt(imgSrc.split('/')[4]);
 
   modalImg.src = generateImageUrl(800, 600, id);
+  updateProgressDots(id);
+
+  createProgressDots(modal, MAX_IMAGE_ID);
 
   prevbtn.onclick = function () {
-    id = id - 1 < 1 ? 12 : id - 1;
+    id = id - 1 < 1 ? MAX_IMAGE_ID : id - 1;
     modalImg.src = generateImageUrl(800, 600, id);
-    // console.log(id);
+    updateProgressDots(id);
   };
   nextbtn.onclick = function () {
-    id = id + 1 > 12 ? 1 : id + 1;
+    id = id + 1 > MAX_IMAGE_ID ? 1 : id + 1;
     modalImg.src = generateImageUrl(800, 600, id);
-    // console.log(id);
+    updateProgressDots(id);
   };
-
-  // console.log(mo)
 }
 
 export default OpenModal;
