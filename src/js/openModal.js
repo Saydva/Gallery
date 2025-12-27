@@ -1,6 +1,8 @@
 import { generateImageUrl } from './constants.js';
 import { MAX_IMAGE_ID } from './constants.js';
-import { createProgressDots, updateProgressDots } from './progerssBar.js';
+import { createProgressDots, updateProgressDots } from './progressBar.js';
+
+createProgressDots(document.getElementById('imageModal'), MAX_IMAGE_ID);
 
 function OpenModal(imgSrc) {
   const modal = document.getElementById('imageModal');
@@ -26,11 +28,9 @@ function OpenModal(imgSrc) {
   };
 
   let id = parseInt(imgSrc.split('/')[4]);
-
   modalImg.src = generateImageUrl(800, 600, id);
-  updateProgressDots(id);
 
-  createProgressDots(modal, MAX_IMAGE_ID);
+  updateProgressDots(id);
 
   prevbtn.onclick = function () {
     id = id - 1 < 1 ? MAX_IMAGE_ID : id - 1;

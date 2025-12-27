@@ -6,6 +6,8 @@ export function createProgressDots(parentElement, numberOfDots = 5) {
     dotsContainer.className =
       'absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2';
     parentElement.appendChild(dotsContainer);
+  } else if (dotsContainer.children.length === numberOfDots) {
+    return; // Already created with correct number of dots
   } else {
     dotsContainer.innerHTML = '';
   }
