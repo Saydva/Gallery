@@ -1,6 +1,6 @@
 import OpenModal from './openModal.js';
 
-import { generateImageUrl } from './openModal.js';
+import { generateImageUrl } from './constants.js';
 
 const galleryImages = [];
 
