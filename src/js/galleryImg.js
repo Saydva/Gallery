@@ -23,7 +23,7 @@ function displayGallery() {
   galleryImages.forEach((image) => {
     const galleryItem = document.createElement('div');
     galleryItem.className =
-      'p-1.5 bg-white rounded-md flex flex-col items-center justify-center text-center hover:scale-110 hover:transition-transform hover:duration-500 hover:shadow-lg sm:sm';
+      'p-1.5 bg-white rounded-md flex flex-col items-center justify-center text-center hover:scale-110 hover:transition-transform hover:duration-500 hover:shadow-lg w-2/5 sm:w-auto';
 
     const img = document.createElement('img');
     img.src = image.src;
@@ -32,7 +32,7 @@ function displayGallery() {
     img.className = 'rounded-md object-contain cursor-pointer ';
 
     const caption = document.createElement('div');
-    caption.className = 'mt-1.5 text-sm text-gray-800';
+    caption.className = 'mt-1.5 text-xs sm:text-sm text-gray-800';
     caption.textContent = image.caption;
 
     galleryItem.appendChild(img);
