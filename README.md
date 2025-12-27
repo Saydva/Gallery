@@ -17,12 +17,12 @@ Projekt je napísaný v čistom HTML, CSS (s Tailwind CSS) a JavaScript (ES6 mod
 ### Klonovanie repozitára
 
 ```
-git clone [URL vášho repozitára na GitHub-e]
+git clone https://github.com/saydva/Gallery.git
 ```
 
 ### Otvorenie projektu
 
-- Stačí otvoriť `src/index.html` v prehliadači.
+- Stačí otvoriť `index.html` v prehliadači.
 - Nie je potrebná žiadna inštalácia ani build.
 
 ## Štruktúra projektu
@@ -34,12 +34,12 @@ Projekt je napísaný v HTML, CSS (s Tailwind CSS) a JavaScript (ES6 modules). N
 ```
 Gallery/
 ├── .gitignore               # Ignorované súbory pre Git
+├── index.html               # Hlavný HTML súbor aplikácie
 ├── package.json             # Základný balíček pre npm (meta, dev závislosti pre Tailwind)
 ├── package-lock.json        # Lock súbor pre npm závislosti
 ├── postcss.config.js        # Konfigurácia pre PostCSS (spracovanie CSS)
 ├── tailwind.config.js       # Konfigurácia pre Tailwind CSS
 └── src/
-    ├── index.html           # Hlavný HTML súbor aplikácie
     ├── css/
     │   ├── output.css       # Vygenerované štýly z Tailwind
     │   └── style.css        # Import Tailwind direktív
@@ -54,7 +54,7 @@ Gallery/
 
 #### HTML
 
-- `src/index.html` – základná štruktúra stránky, obsahuje galériu a modálne okno.
+- `index.html` – základná štruktúra stránky, obsahuje galériu a modálne okno.
 
 #### CSS
 
@@ -95,4 +95,4 @@ Gallery/
 
 ## Online verzia
 
-Projekt live: [URL vášho GitHub Pages, ak máte]
+Projekt live: https://saydva.github.io/Gallery/
