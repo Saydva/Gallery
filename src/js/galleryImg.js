@@ -23,7 +23,7 @@ function displayGallery() {
   galleryImages.forEach((image) => {
     const galleryItem = document.createElement('div');
     galleryItem.className =
-      'p-1.5 bg-white rounded-md flex flex-col items-center justify-center text-center hover:scale-110 hover:transition-transform hover:duration-500 hover:shadow-lg';
+      'p-1.5 bg-white rounded-md flex flex-col items-center justify-center text-center hover:scale-110 hover:transition-transform hover:duration-500 hover:shadow-lg ';
 
     const img = document.createElement('img');
     img.src = image.src;
