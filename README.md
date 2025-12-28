@@ -96,3 +96,7 @@ Gallery/
 ## Online verzia
 
 Projekt live: https://saydva.github.io/Gallery/
+
+### QR kód
+
+![QR Code](qr_code.png)
